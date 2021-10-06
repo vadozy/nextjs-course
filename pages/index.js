@@ -13,9 +13,12 @@ function HomePage(props) {
       <li>Product 3 (hardcoded)</li>
       {products.map((product) => (
         <li key={product.id}>
-          <Link href={`/${product.id}`}>{product.title}</Link>
+          <Link href={`/products/${product.id}`}>{product.title}</Link>
         </li>
       ))}
+      <li>
+        <Link href="/user-profile">User Profile</Link>
+      </li>
     </ul>
   );
 }
@@ -29,7 +32,7 @@ export async function getStaticProps() {
     props: {
       products: data.products,
     },
-    revalidate: 10, // seconds
+    revalidate: 20, // seconds
   };
   // return {
   //   props: {

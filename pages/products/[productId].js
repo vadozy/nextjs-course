@@ -2,7 +2,6 @@ import fs from 'fs/promises';
 import path from 'path';
 
 import React from 'react';
-import { useRouter } from 'next/router';
 
 function ProductDetailsPage(props) {
   const { loadedProduct } = props;
