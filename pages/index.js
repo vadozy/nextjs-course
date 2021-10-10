@@ -1,13 +1,21 @@
 import React from 'react';
+import Head from 'next/head';
+
 import EventList from '../components/events/event-list';
 import { getFeaturedEvents } from '../helpers/api-utils';
 
 function HomePage(props) {
   const { featuredEvents } = props;
   return (
-    <div>
-      <EventList items={featuredEvents} />
-    </div>
+    <>
+      <Head>
+        <title>Featured Events</title>
+        <meta name="description" content="Some Great Events" />
+      </Head>
+      <div>
+        <EventList items={featuredEvents} />
+      </div>
+    </>
   );
 }
 
