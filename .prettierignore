@@ -3,3 +3,4 @@ public/
 lib/
 node_modules/
 
+.next/
