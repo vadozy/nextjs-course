@@ -5,10 +5,10 @@ import classes from './main-navigation.module.css';
 
 function MainNavigation() {
   const { data: session, status } = useSession();
-  console.log('session');
-  console.log(session);
-  console.log('status');
-  console.log(status);
+  // console.log('session');
+  // console.log(session);
+  // console.log('status');
+  // console.log(status);
 
   const logoutHandler = () => {
     signOut();
